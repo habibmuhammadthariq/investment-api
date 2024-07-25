@@ -12,7 +12,7 @@
     "dev": "rimraf build && tsc --project tsconfig.build.json && tsc-alias --project tsconfig.build.json && concurrently -k npm:dev:*",
     "build:compile": "tsc --project tsconfig.build.json",
     "build:resolve-path": "tsc-alias --project tsconfig.build.json",
-    "build": "npm run build:compile && npm run build:resolve-path",
+    "build": "npm install && npm run build:compile && npm run build:resolve-path",
     "start": "node build/index.js",
     "test": "NODE_OPTIONS=--experimental-vm-modules jest --runInBand",
     "test:coverage": "rimraf coverage && npm run test -- --coverage",
