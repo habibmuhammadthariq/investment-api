@@ -1,8 +1,8 @@
 import { Router } from "express";
 import * as controller from "./controllers/index.js";
-import auth from "../../middleware/auth.js";
-import password from "../../middleware/password.js";
-import permission from "../../middleware/permission.js";
+import auth from "@src/middleware/auth.js";
+import password from "@src/middleware/password.js";
+import permission from "@src/middleware/permission.js";
 const router = Router();
 router.get("/report", auth, permission("deposit.view", "withdrawal.view"), controller.readReports);
 router.get("/", auth, permission("deposit.view", "withdrawal.view"), controller.readMany);

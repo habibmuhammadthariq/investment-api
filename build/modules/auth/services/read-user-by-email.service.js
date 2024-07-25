@@ -1,4 +1,4 @@
-import { UserRepository } from "../../../modules/users/repositories/user.repository.js";
+import { UserRepository } from "@src/modules/users/repositories/user.repository.js";
 export class ReadUserByEmailService {
     constructor(db) {
         this.db = db;

@@ -1,7 +1,7 @@
 import { ApiError } from "@point-hub/express-error-handler";
-import { secretKey } from "../../../config/auth.js";
-import { ReadUserService } from "../../../modules/users/services/read.service.js";
-import { verifyToken } from "../../../utils/jwt.js";
+import { secretKey } from "@src/config/auth.js";
+import { ReadUserService } from "@src/modules/users/services/read.service.js";
+import { verifyToken } from "@src/utils/jwt.js";
 export class VerifyTokenUserService {
     constructor(db) {
         this.db = db;

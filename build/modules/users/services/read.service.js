@@ -1,7 +1,7 @@
 import { ObjectId } from "mongodb";
 import { hasOne } from "../entities/user.entity.js";
 import { UserRepository } from "../repositories/user.repository.js";
-import { fields } from "../../../database/mongodb-util.js";
+import { fields } from "@src/database/mongodb-util.js";
 export class ReadUserService {
     constructor(db) {
         this.db = db;

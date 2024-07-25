@@ -1,9 +1,9 @@
 import { ApiError } from "@point-hub/express-error-handler";
 import { UserRepository } from "../repositories/user.repository.js";
 import { ReadUserService } from "./read.service.js";
-import { issuer, secretKey } from "../../../config/auth.js";
-import { verify } from "../../../utils/hash.js";
-import { generateRefreshToken, signNewToken } from "../../../utils/jwt.js";
+import { issuer, secretKey } from "@src/config/auth.js";
+import { verify } from "@src/utils/hash.js";
+import { generateRefreshToken, signNewToken } from "@src/utils/jwt.js";
 export class SigninUserService {
     constructor(db) {
         this.db = db;

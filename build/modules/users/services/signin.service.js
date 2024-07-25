@@ -1,7 +1,7 @@
 import { UserRepository } from "../repositories/user.repository.js";
-import { issuer, secretKey } from "../../../config/auth.js";
-import { verify } from "../../../utils/hash.js";
-import { signNewToken } from "../../../utils/jwt.js";
+import { issuer, secretKey } from "@src/config/auth.js";
+import { verify } from "@src/utils/hash.js";
+import { signNewToken } from "@src/utils/jwt.js";
 export class SigninUserService {
     constructor(db) {
         this.db = db;

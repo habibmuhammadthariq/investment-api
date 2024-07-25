@@ -1,5 +1,5 @@
-import { DepositRepository } from "../../../modules/deposits/repositories/deposit.repository.js";
-import { ReadDepositService } from "../../../modules/deposits/services/read.service.js";
+import { DepositRepository } from "@src/modules/deposits/repositories/deposit.repository.js";
+import { ReadDepositService } from "@src/modules/deposits/services/read.service.js";
 export class DeleteDepositService {
     constructor(db) {
         this.db = db;

@@ -1,5 +1,5 @@
-import { db } from "../../../database/database.js";
-import { ReadManyDepositService } from "../../../modules/deposits/services/read-many.service.js";
+import { db } from "@src/database/database.js";
+import { ReadManyDepositService } from "@src/modules/deposits/services/read-many.service.js";
 export const readMany = async (req, res, next) => {
     try {
         const readManyDepositService = new ReadManyDepositService(db);

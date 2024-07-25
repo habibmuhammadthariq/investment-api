@@ -1,8 +1,8 @@
 import { format } from "date-fns";
 import { DepositRepository } from "../repositories/deposit.repository.js";
-import { db } from "../../../database/database.js";
-import { addDay } from "../../../utils/date.js";
-import { padWithZero } from "../../../utils/string.js";
+import { db } from "@src/database/database.js";
+import { addDay } from "@src/utils/date.js";
+import { padWithZero } from "@src/utils/string.js";
 export class CalculateDepositService {
     async calculate(body, entity) {
         let data = {

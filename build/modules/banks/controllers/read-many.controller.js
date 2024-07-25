@@ -1,5 +1,5 @@
 import { ReadManyBankService } from "../services/read-many.service.js";
-import { db } from "../../../database/database.js";
+import { db } from "@src/database/database.js";
 export const readMany = async (req, res, next) => {
     try {
         const readManyBankService = new ReadManyBankService(db);

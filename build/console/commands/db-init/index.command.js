@@ -1,7 +1,7 @@
 import { BaseCommand } from "@point-hub/express-cli";
-import { connection } from "../../../config/database.js";
-import MongoDbConnection from "../../../database/connection-mongodb.js";
-import DatabaseConnection from "../../../database/connection.js";
+import { connection } from "@src/config/database.js";
+import MongoDbConnection from "@src/database/connection-mongodb.js";
+import DatabaseConnection from "@src/database/connection.js";
 export default class DbInitCommand extends BaseCommand {
     constructor() {
         super({

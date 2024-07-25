@@ -1,4 +1,4 @@
-import { DepositRepository } from "../../../modules/deposits/repositories/deposit.repository.js";
+import { DepositRepository } from "@src/modules/deposits/repositories/deposit.repository.js";
 import { ObjectId } from "mongodb";
 export class RealisedInterestService {
     constructor(db) {

@@ -1,7 +1,7 @@
 import { ApiError } from "@point-hub/express-error-handler";
 import { MongoClient, ObjectId, MongoServerError, } from "mongodb";
 import { fields, limit, page, skip, sort } from "./mongodb-util.js";
-import MongoError from "../utils/mongo-error.js";
+import MongoError from "@src/utils/mongo-error.js";
 export default class MongoDbConnection {
     constructor(config) {
         const options = {};

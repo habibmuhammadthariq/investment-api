@@ -1,5 +1,5 @@
 import { format } from "date-fns";
-import { DepositRepository } from "../../../modules/deposits/repositories/deposit.repository.js";
+import { DepositRepository } from "@src/modules/deposits/repositories/deposit.repository.js";
 export class ReadManyDepositService {
     constructor(db) {
         this.db = db;

@@ -1,5 +1,5 @@
 import { ReadReportService } from "../services/read-report.service.js";
-import { db } from "../../../database/database.js";
+import { db } from "@src/database/database.js";
 export const readReports = async (req, res, next) => {
     try {
         const readReportService = new ReadReportService(db);

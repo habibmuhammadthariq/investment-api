@@ -5,7 +5,7 @@ yarn.lock
 pnpm-lock.yaml
 
 # build
-# build
+build
 
 # envorinment variable
 .env

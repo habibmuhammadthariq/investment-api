@@ -1,7 +1,7 @@
 import { BaseCommand } from "@point-hub/express-cli";
-import { connection } from "../../../config/database.js";
-import MongoDbConnection from "../../../database/connection-mongodb.js";
-import DatabaseConnection from "../../../database/connection.js";
+import { connection } from "@src/config/database.js";
+import MongoDbConnection from "@src/database/connection-mongodb.js";
+import DatabaseConnection from "@src/database/connection.js";
 export default class DbSeedCommand extends BaseCommand {
     constructor() {
         super({
@@ -22,22 +22,22 @@ export default class DbSeedCommand extends BaseCommand {
             }));
             dbConnection.database(connection[connection.default].name);
             // Roles
-            const { rolesSeed } = await import("../../../modules/roles/seeds/roles.seed.js");
+            const { rolesSeed } = await import("@src/modules/roles/seeds/roles.seed.js");
             await dbConnection.collection("roles").deleteAll();
             const rolesData = await dbConnection.collection("roles").createMany(rolesSeed);
             console.info(rolesData);
             // Users
-            const { usersSeed } = await import("../../../modules/users/seeds/users.seed.js");
+            const { usersSeed } = await import("@src/modules/users/seeds/users.seed.js");
             await dbConnection.collection("users").deleteAll();
             const usersData = await dbConnection.collection("users").createMany(usersSeed);
             console.info(usersData);
             // Owners
-            const { ownersSeed } = await import("../../../modules/owners/seeds/owners.seed.js");
+            const { ownersSeed } = await import("@src/modules/owners/seeds/owners.seed.js");
             await dbConnection.collection("owners").deleteAll();
             const ownersData = await dbConnection.collection("owners").createMany(ownersSeed);
             console.info(ownersData);
             // Banks
-            const { banksSeed } = await import("../../../modules/banks/seeds/banks.seed.js");
+            const { banksSeed } = await import("@src/modules/banks/seeds/banks.seed.js");
             await dbConnection.collection("banks").deleteAll();
             const banksData = await dbConnection.collection("banks").createMany(banksSeed);
             console.info(banksData);

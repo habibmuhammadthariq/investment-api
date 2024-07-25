@@ -1,4 +1,4 @@
-import { BaseRepository } from "../../../database/base-repository.js";
+import { BaseRepository } from "@src/database/base-repository.js";
 export class BankRepository extends BaseRepository {
     constructor(db) {
         super(db, "banks");

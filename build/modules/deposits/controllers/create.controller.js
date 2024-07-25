@@ -1,10 +1,10 @@
 import { ApiError } from "@point-hub/express-error-handler";
 import { DepositRepository } from "../repositories/deposit.repository.js";
 import { validate } from "../request/create.request.js";
-import { db } from "../../../database/database.js";
-import { CalculateDepositService } from "../../../modules/deposits/services/calculate.service.js";
-import { CreateDepositService } from "../../../modules/deposits/services/create.service.js";
-import { ReadDepositService } from "../../../modules/deposits/services/read.service.js";
+import { db } from "@src/database/database.js";
+import { CalculateDepositService } from "@src/modules/deposits/services/calculate.service.js";
+import { CreateDepositService } from "@src/modules/deposits/services/create.service.js";
+import { ReadDepositService } from "@src/modules/deposits/services/read.service.js";
 export const create = async (req, res, next) => {
     try {
         const session = db.startSession();
