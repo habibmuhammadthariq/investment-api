@@ -1,6 +1,6 @@
-import { db } from "../../../database/database.js";
 import { validate } from "../request/invite.request.js";
 import { InviteUserService } from "../services/invite.service.js";
+import { db } from "../../../database/database.js";
 import Mailer from "../../../services/mailer/index.js";
 export const invite = async (req, res, next) => {
     try {
